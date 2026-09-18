@@ -15,28 +15,26 @@ int szukajIndexNajWieksza(int[] nieposortowana)
     return indexNajwiekszej;
 
 }
-void sortuj(int[] nieposortowana)
+void sortuj(int[] nieposortowana,int indexNajwiekszej)
 {
+    IO.println("Największy element tablicy to "+nieposortowana[indexNajwiekszej]);
 
 }
-int[] wczytajTablice()
-{
+
+void main() {
+    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+    // to see how IntelliJ IDEA suggests fixing it.
+    IO.println(String.format("Wstępny commit"));
+
     Scanner scanner = new Scanner(System.in);
-    int[] nieposortowana = new int[10];
+    int[] nieposortowana = new int[5];
     for (int i = 0; i <= nieposortowana.length-1; i++) {
         IO.println("podaj " + (i+1)+" liczbe tablicy");
         nieposortowana[i] = scanner.nextInt();
     }
 
-
-    return nieposortowana;
-}
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Wstępny commit"));
-    IO.println("największa liczba ma index:"+(szukajIndexNajWieksza(wczytajTablice())+1));
-
+    //IO.println("największa liczba ma index:"+(szukajIndexNajWieksza(nieposortowana)+1));
+    sortuj(nieposortowana,szukajIndexNajWieksza(nieposortowana));
 
 
 
