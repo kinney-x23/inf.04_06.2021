@@ -27,8 +27,6 @@ void sortuj(int[] tablica)
         tablica[indexNajwiekszej] = tablica[i - 1];
         tablica[i - 1] = przechowaj;
     }
-
-
 }
 
 void main() {
